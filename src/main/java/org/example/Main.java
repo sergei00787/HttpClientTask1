@@ -38,13 +38,13 @@ public class Main {
                 });
 
                 facts.stream()
-                        .filter(fact -> fact.getUpvotes() != null && Integer.parseInt(fact.getUpvotes()) > 0)
+                        .filter(fact -> fact.getUpvotes() > 0)
                         .forEach(System.out::println);
 
-            } catch (IOException e) {
-                e.printStackTrace();
             } catch (NumberFormatException nfe) {
                 nfe.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
 

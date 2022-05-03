@@ -18,12 +18,12 @@ public class FactAboutCat {
     private String user;
 
     @JsonProperty
-    private String upvotes;
+    private int upvotes;
 
     public FactAboutCat() {
     }
 
-    public FactAboutCat(String id, String factText, String type, String user, String upvotes) {
+    public FactAboutCat(String id, String factText, String type, String user, int upvotes) {
         this.id = id;
         this.factText = factText;
         this.type = type;
@@ -64,12 +64,12 @@ public class FactAboutCat {
         this.user = user;
     }
 
-    public String getUpvotes() {
+    public int getUpvotes() {
         return upvotes;
     }
 
     @JsonSetter
-    public void setUpvotes(String upvotes) {
+    public void setUpvotes(int upvotes) {
         this.upvotes = upvotes;
     }
 
